@@ -147,10 +147,17 @@
     <Compile Include="ConvertItemName.cs" />
     <Compile Include="ConvertPokemonName.cs" />
     <Compile Include="Models\LoggingStrings.cs" />
+    <Compile Include="PokemonDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokemonDialog.Designer.cs">
+      <DependentUpon>PokemonDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Resources\ProgressBar.cs" />
     <Compile Include="ResultForm.cs">
@@ -301,15 +308,623 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PokemonPictures\Pokemon_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_101.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_102.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_103.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_104.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_105.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_106.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_107.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_108.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_109.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_110.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_111.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_112.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_113.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_114.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_115.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_116.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_117.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_118.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_119.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_120.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_121.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_122.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_123.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_124.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_125.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_126.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_127.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_128.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_129.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_13.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_130.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_131.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_132.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_133.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_134.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_135.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_136.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_137.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_138.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_139.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_14.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_140.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_141.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_142.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_143.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_144.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_145.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_146.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_147.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_148.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_149.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_151.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_17.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_18.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_21.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_22.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_23.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_26.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_27.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_31.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_33.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_35.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_37.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_38.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_39.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_40.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_41.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_42.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_43.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_44.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_46.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_47.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_49.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_51.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_52.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_53.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_54.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_55.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_56.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_57.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_58.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_59.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_60.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_61.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_62.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_63.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_65.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_66.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_67.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_68.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_69.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_70.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_71.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_72.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_73.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_74.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_75.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_76.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_77.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_78.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_79.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_80.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_81.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_82.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_83.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_84.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_85.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_86.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_87.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_88.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_89.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_91.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_92.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_93.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_94.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_95.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_96.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_97.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_98.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PokemonPictures\Pokemon_99.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\encrypt.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Icon.ico" />
+    <None Include="Resources\Pokemon_151.png" />
+    <None Include="Resources\Pokemon_150.png" />
+    <None Include="Resources\Pokemon_149.png" />
+    <None Include="Resources\Pokemon_148.png" />
+    <None Include="Resources\Pokemon_147.png" />
+    <None Include="Resources\Pokemon_146.png" />
+    <None Include="Resources\Pokemon_145.png" />
+    <None Include="Resources\Pokemon_144.png" />
+    <None Include="Resources\Pokemon_143.png" />
+    <None Include="Resources\Pokemon_142.png" />
+    <None Include="Resources\Pokemon_141.png" />
+    <None Include="Resources\Pokemon_140.png" />
+    <None Include="Resources\Pokemon_139.png" />
+    <None Include="Resources\Pokemon_138.png" />
+    <None Include="Resources\Pokemon_137.png" />
+    <None Include="Resources\Pokemon_136.png" />
+    <None Include="Resources\Pokemon_135.png" />
+    <None Include="Resources\Pokemon_134.png" />
+    <None Include="Resources\Pokemon_133.png" />
+    <None Include="Resources\Pokemon_132.png" />
+    <None Include="Resources\Pokemon_131.png" />
+    <None Include="Resources\Pokemon_130.png" />
+    <None Include="Resources\Pokemon_129.png" />
+    <None Include="Resources\Pokemon_128.png" />
+    <None Include="Resources\Pokemon_127.png" />
+    <None Include="Resources\Pokemon_126.png" />
+    <None Include="Resources\Pokemon_125.png" />
+    <None Include="Resources\Pokemon_124.png" />
+    <None Include="Resources\Pokemon_123.png" />
+    <None Include="Resources\Pokemon_122.png" />
+    <None Include="Resources\Pokemon_121.png" />
+    <None Include="Resources\Pokemon_120.png" />
+    <None Include="Resources\Pokemon_119.png" />
+    <None Include="Resources\Pokemon_118.png" />
+    <None Include="Resources\Pokemon_117.png" />
+    <None Include="Resources\Pokemon_116.png" />
+    <None Include="Resources\Pokemon_115.png" />
+    <None Include="Resources\Pokemon_114.png" />
+    <None Include="Resources\Pokemon_113.png" />
+    <None Include="Resources\Pokemon_112.png" />
+    <None Include="Resources\Pokemon_111.png" />
+    <None Include="Resources\Pokemon_110.png" />
+    <None Include="Resources\Pokemon_109.png" />
+    <None Include="Resources\Pokemon_108.png" />
+    <None Include="Resources\Pokemon_107.png" />
+    <None Include="Resources\Pokemon_106.png" />
+    <None Include="Resources\Pokemon_105.png" />
+    <None Include="Resources\Pokemon_104.png" />
+    <None Include="Resources\Pokemon_103.png" />
+    <None Include="Resources\Pokemon_102.png" />
+    <None Include="Resources\Pokemon_101.png" />
+    <None Include="Resources\Pokemon_100.png" />
+    <None Include="Resources\Pokemon_99.png" />
+    <None Include="Resources\Pokemon_98.png" />
+    <None Include="Resources\Pokemon_97.png" />
+    <None Include="Resources\Pokemon_96.png" />
+    <None Include="Resources\Pokemon_95.png" />
+    <None Include="Resources\Pokemon_94.png" />
+    <None Include="Resources\Pokemon_93.png" />
+    <None Include="Resources\Pokemon_92.png" />
+    <None Include="Resources\Pokemon_91.png" />
+    <None Include="Resources\Pokemon_90.png" />
+    <None Include="Resources\Pokemon_89.png" />
+    <None Include="Resources\Pokemon_88.png" />
+    <None Include="Resources\Pokemon_87.png" />
+    <None Include="Resources\Pokemon_86.png" />
+    <None Include="Resources\Pokemon_85.png" />
+    <None Include="Resources\Pokemon_84.png" />
+    <None Include="Resources\Pokemon_83.png" />
+    <None Include="Resources\Pokemon_82.png" />
+    <None Include="Resources\Pokemon_81.png" />
+    <None Include="Resources\Pokemon_80.png" />
+    <None Include="Resources\Pokemon_79.png" />
+    <None Include="Resources\Pokemon_78.png" />
+    <None Include="Resources\Pokemon_77.png" />
+    <None Include="Resources\Pokemon_76.png" />
+    <None Include="Resources\Pokemon_75.png" />
+    <None Include="Resources\Pokemon_74.png" />
+    <None Include="Resources\Pokemon_73.png" />
+    <None Include="Resources\Pokemon_72.png" />
+    <None Include="Resources\Pokemon_71.png" />
+    <None Include="Resources\Pokemon_70.png" />
+    <None Include="Resources\Pokemon_69.png" />
+    <None Include="Resources\Pokemon_68.png" />
+    <None Include="Resources\Pokemon_67.png" />
+    <None Include="Resources\Pokemon_66.png" />
+    <None Include="Resources\Pokemon_65.png" />
+    <None Include="Resources\Pokemon_64.png" />
+    <None Include="Resources\Pokemon_63.png" />
+    <None Include="Resources\Pokemon_62.png" />
+    <None Include="Resources\Pokemon_61.png" />
+    <None Include="Resources\Pokemon_60.png" />
+    <None Include="Resources\Pokemon_59.png" />
+    <None Include="Resources\Pokemon_58.png" />
+    <None Include="Resources\Pokemon_57.png" />
+    <None Include="Resources\Pokemon_56.png" />
+    <None Include="Resources\Pokemon_55.png" />
+    <None Include="Resources\Pokemon_54.png" />
+    <None Include="Resources\Pokemon_53.png" />
+    <None Include="Resources\Pokemon_52.png" />
+    <None Include="Resources\Pokemon_51.png" />
+    <None Include="Resources\Pokemon_50.png" />
+    <None Include="Resources\Pokemon_49.png" />
+    <None Include="Resources\Pokemon_48.png" />
+    <None Include="Resources\Pokemon_47.png" />
+    <None Include="Resources\Pokemon_46.png" />
+    <None Include="Resources\Pokemon_45.png" />
+    <None Include="Resources\Pokemon_44.png" />
+    <None Include="Resources\Pokemon_43.png" />
+    <None Include="Resources\Pokemon_42.png" />
+    <None Include="Resources\Pokemon_41.png" />
+    <None Include="Resources\Pokemon_40.png" />
+    <None Include="Resources\Pokemon_39.png" />
+    <None Include="Resources\Pokemon_38.png" />
+    <None Include="Resources\Pokemon_37.png" />
+    <None Include="Resources\Pokemon_36.png" />
+    <None Include="Resources\Pokemon_35.png" />
+    <None Include="Resources\Pokemon_34.png" />
+    <None Include="Resources\Pokemon_33.png" />
+    <None Include="Resources\Pokemon_32.png" />
+    <None Include="Resources\Pokemon_31.png" />
+    <None Include="Resources\Pokemon_30.png" />
+    <None Include="Resources\Pokemon_29.png" />
+    <None Include="Resources\Pokemon_28.png" />
+    <None Include="Resources\Pokemon_27.png" />
+    <None Include="Resources\Pokemon_26.png" />
+    <None Include="Resources\Pokemon_25.png" />
+    <None Include="Resources\Pokemon_24.png" />
+    <None Include="Resources\Pokemon_23.png" />
+    <None Include="Resources\Pokemon_22.png" />
+    <None Include="Resources\Pokemon_21.png" />
+    <None Include="Resources\Pokemon_20.png" />
+    <None Include="Resources\Pokemon_19.png" />
+    <None Include="Resources\Pokemon_18.png" />
+    <None Include="Resources\Pokemon_17.png" />
+    <None Include="Resources\Pokemon_16.png" />
+    <None Include="Resources\Pokemon_15.png" />
+    <None Include="Resources\Pokemon_14.png" />
+    <None Include="Resources\Pokemon_13.png" />
+    <None Include="Resources\Pokemon_12.png" />
+    <None Include="Resources\Pokemon_11.png" />
+    <None Include="Resources\Pokemon_10.png" />
+    <None Include="Resources\Pokemon_9.png" />
+    <None Include="Resources\Pokemon_8.png" />
+    <None Include="Resources\Pokemon_7.png" />
+    <None Include="Resources\Pokemon_6.png" />
+    <None Include="Resources\Pokemon_5.png" />
+    <None Include="Resources\Pokemon_4.png" />
+    <None Include="Resources\Pokemon_3.png" />
+    <None Include="Resources\Pokemon_2.png" />
+    <None Include="Resources\Pokemon_1.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PokemonDialog.resx">
+      <DependentUpon>PokemonDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>

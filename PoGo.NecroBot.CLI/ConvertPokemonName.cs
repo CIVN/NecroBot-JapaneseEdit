@@ -31,6 +31,30 @@
 		}
 
 		/// <summary>
+		/// Convert to English from Japanese.
+		/// </summary>
+		/// <param name="english_name"></param>
+		/// <returns></returns>
+		public static string ToEnglish(string japanese_name)
+		{
+			var i = 0;
+			var en_name = "";
+
+			foreach (var jp in Pokemons_JapaneseNames)
+			{
+				if (jp == japanese_name.ToUpper())
+				{
+					en_name = Pokemons_EnglishNames[i];
+					break;
+				}
+
+				i++;
+			}
+
+			return en_name;
+		}
+
+		/// <summary>
 		/// Il est converti en français.
 		/// </summary>
 		/// <param name="english_name"></param>
@@ -54,9 +78,10 @@
 			return fr_name;
 		}
 
-		#region
-		private static string[] Pokemons_EnglishNames = new string[]
+		#region Pokemons_EnglishNames
+		public static string[] Pokemons_EnglishNames = new string[]
 		{
+			"MISSINGNO",
 			"BULBASAUR",
 			"IVYSAUR",
 			"VENUSAUR",
@@ -211,9 +236,10 @@
 		};
 		#endregion
 
-		#region
-		private static string[] Pokemons_FrenchNames = new string[]
+		#region Pokemons_FrenchNames
+		public static string[] Pokemons_FrenchNames = new string[]
 		{
+			"manquant pas",
 			"Bulbizarre",
 			"Herbizarre",
 			"Florizarre",
@@ -368,9 +394,10 @@
 		};
 		#endregion
 
-		#region
-		private static string[] Pokemons_JapaneseNames = new string[]
+		#region Pokemons_JapaneseNames
+		public static string[] Pokemons_JapaneseNames = new string[]
 		{
+			"不明",
 			"フシギダネ",
 			"フシギソウ",
 			"フシギバナ",

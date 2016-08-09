@@ -1,0 +1,13 @@
+C:\Users\VN\Desktop\NecroLastest\NecroBot-master\POGOProtos\POGOProtos\bin\x86\Release\POGOProtos.dll
+C:\Users\VN\Desktop\NecroLastest\NecroBot-master\POGOProtos\POGOProtos\bin\x86\Release\POGOProtos.pdb
+C:\Users\VN\Desktop\NecroLastest\NecroBot-master\POGOProtos\POGOProtos\bin\x86\Release\Google.Protobuf.dll
+C:\Users\VN\Desktop\NecroLastest\NecroBot-master\POGOProtos\POGOProtos\bin\x86\Release\Google.Protobuf.xml
+C:\Users\VN\Desktop\NecroLastest\NecroBot-master\POGOProtos\POGOProtos\obj\x86\Release\POGOProtos.dll
+C:\Users\VN\Desktop\NecroLastest\NecroBot-master\POGOProtos\POGOProtos\obj\x86\Release\POGOProtos.pdb
+C:\Users\VN\Documents\GitHub\NecroBot-JapaneseEdit\POGOProtos\POGOProtos\bin\x86\Release\POGOProtos.dll
+C:\Users\VN\Documents\GitHub\NecroBot-JapaneseEdit\POGOProtos\POGOProtos\bin\x86\Release\POGOProtos.pdb
+C:\Users\VN\Documents\GitHub\NecroBot-JapaneseEdit\POGOProtos\POGOProtos\bin\x86\Release\Google.Protobuf.dll
+C:\Users\VN\Documents\GitHub\NecroBot-JapaneseEdit\POGOProtos\POGOProtos\bin\x86\Release\Google.Protobuf.xml
+C:\Users\VN\Documents\GitHub\NecroBot-JapaneseEdit\POGOProtos\POGOProtos\obj\x86\Release\POGOProtos.csprojResolveAssemblyReference.cache
+C:\Users\VN\Documents\GitHub\NecroBot-JapaneseEdit\POGOProtos\POGOProtos\obj\x86\Release\POGOProtos.dll
+C:\Users\VN\Documents\GitHub\NecroBot-JapaneseEdit\POGOProtos\POGOProtos\obj\x86\Release\POGOProtos.pdb
