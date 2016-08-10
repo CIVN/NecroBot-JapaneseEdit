@@ -116,8 +116,7 @@ namespace PoGo.NecroBot.Logic.Tasks
                         {
                             if ((int) fortSearch.CooldownCompleteTimestampMs != 0)
                             {
-                                break;
-                                    // Check if successfully looted, if so program can continue as this was "false alarm".
+                                break; // Check if successfully looted, if so program can continue as this was "false alarm".
                             }
 
                             fortTry += 1;
@@ -126,14 +125,29 @@ namespace PoGo.NecroBot.Logic.Tasks
                             {
                                 Name = fortInfo.Name,
                                 Try = fortTry,
-                                Max = retryNumber - zeroCheck
+                                Max = retryNumber - zeroCheck,
+                                Looted = false
                             });
 
-                            DelayingUtils.Delay(session.LogicSettings.DelayBetweenPlayerActions, 0);
+                            if (!session.LogicSettings.FastSoftBanBypass)
+                            {
+                                DelayingUtils.Delay(session.LogicSettings.DelayBetweenPlayerActions, 0);
+                            }
                         }
                     }
                     else
                     {
+                        if (fortTry != 0)
+                        {
+                            session.EventDispatcher.Send(new FortFailedEvent
+                            {
+                                Name = fortInfo.Name,
+                                Try = fortTry + 1,
+                                Max = retryNumber - zeroCheck,
+                                Looted = true
+                            });
+                        }
+
                         session.EventDispatcher.Send(new FortUsedEvent
                         {
                             Id = pokeStop.Id,
@@ -175,31 +189,31 @@ namespace PoGo.NecroBot.Logic.Tasks
                     }
 
                     if (session.LogicSettings.UseLuckyEggConstantly)
-                        UseLuckyEggConstantlyTask.Execute(session, cancellationToken);
+                        await UseLuckyEggConstantlyTask.Execute(session, cancellationToken);
 
                     if (session.LogicSettings.UseIncenseConstantly)
-                        UseIncenseConstantlyTask.Execute(session, cancellationToken);
+                        await UseIncenseConstantlyTask.Execute(session, cancellationToken);
 
                     if (session.LogicSettings.TransferDuplicatePokemon)
-                        TransferDuplicatePokemonTask.Execute(session, cancellationToken);
+                        await TransferDuplicatePokemonTask.Execute(session, cancellationToken);
 
                     if (session.LogicSettings.TransferWeakPokemon)
-                        TransferWeakPokemonTask.Execute(session, cancellationToken);
+                        await TransferWeakPokemonTask.Execute(session, cancellationToken);
 
                     if (session.LogicSettings.RenamePokemon)
-                        RenamePokemonTask.Execute(session, cancellationToken);
+                        await RenamePokemonTask.Execute(session, cancellationToken);
 
                     if (session.LogicSettings.AutoFavoritePokemon)
-                        FavoritePokemonTask.Execute(session, cancellationToken);
+                        await FavoritePokemonTask.Execute(session, cancellationToken);
 
                     if (session.LogicSettings.AutomaticallyLevelUpPokemon)
-                        LevelUpPokemonTask.Execute(session, cancellationToken).Wait(cancellationToken);
+                        await LevelUpPokemonTask.Execute(session, cancellationToken);
 
-                    GetPokeDexCount.Execute(session, cancellationToken).Wait(cancellationToken);
+                    await GetPokeDexCount.Execute(session, cancellationToken);
                 }
 
                 if (session.LogicSettings.SnipeAtPokestops || session.LogicSettings.UseSnipeLocationServer)
-                    SnipePokemonTask.Execute(session, cancellationToken).Wait(cancellationToken);
+                    await SnipePokemonTask.Execute(session, cancellationToken);
             }
         }
 

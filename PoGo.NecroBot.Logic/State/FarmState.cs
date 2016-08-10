@@ -12,7 +12,6 @@ namespace PoGo.NecroBot.Logic.State
     {
         public async Task<IState> Execute(ISession session, CancellationToken cancellationToken)
         {
-
             if (session.LogicSettings.EvolveAllPokemonAboveIv || session.LogicSettings.EvolveAllPokemonWithEnoughCandy 
                || session.LogicSettings.UseLuckyEggsWhileEvolving || session.LogicSettings.KeepPokemonsThatCanEvolve)
             {
@@ -26,7 +25,7 @@ namespace PoGo.NecroBot.Logic.State
 
             if (session.LogicSettings.TransferDuplicatePokemon)
             {
-                TransferDuplicatePokemonTask.Execute(session, cancellationToken);
+                await TransferDuplicatePokemonTask.Execute(session, cancellationToken);
             }
 
             if (session.LogicSettings.UseLuckyEggConstantly)
